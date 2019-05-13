@@ -24,3 +24,43 @@
   visibility: hidden;
   transition: opacity 400ms;
 }
+
+@-webkit-keyframes bs-lazy-anim {
+    from {
+        background-position: -800px 0
+    }
+
+    to {
+        background-position: 400px 0
+    }
+}
+
+@keyframes bs-lazy-anim {
+    from {
+        background-position: -800px 0
+    }
+
+    to {
+        background-position: 400px 0
+    }
+}
+
+@-webkit-keyframes bs-lazy-anim-rtl {
+    from {
+        background-position: 400px 0
+    }
+
+    to {
+        background-position: -800px 0
+    }
+}
+
+@keyframes bs-lazy-anim-rtl {
+    from {
+        background-position: 400px 0
+    }
+
+    to {
+        background-position: -800px 0
+    }
+} 
