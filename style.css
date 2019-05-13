@@ -1,0 +1,26 @@
+.d-lazy {
+  position: relative;
+}
+.d-lazy::before {
+  opacity: 1;
+  background-color: #e9ebee;
+  background-image: linear-gradient(to left, #e9ebee 0, #f4f5f6 20%, #e9ebee 40%, #e9ebee 100%);
+  background-repeat: no-repeat;
+  background-size: 1000px 900px;
+  -webkit-animation: 1s linear infinite forwards bs-lazy-anim;
+  -moz-animation: 1s linear infinite forwards bs-lazy-anim;
+  animation: 1.01s linear infinite forwards bs-lazy-anim;
+  transition: opacity 400ms;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  content: "";
+}
+.d-lazy.d-loaded::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 400ms;
+}
