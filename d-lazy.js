@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //   lazyImage.classList.remove("d-normal");
         //   lazyImage.classList.add("d-loaded");
           lazyImage.parentElement.classList.add("d-loaded");
+          lazyImage.classList.add("is-loaded");
           lazyImageObserver.unobserve(lazyImage);
         }
       });

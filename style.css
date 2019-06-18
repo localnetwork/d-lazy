@@ -1,66 +1,52 @@
 .d-lazy {
   position: relative;
+  background-color: #f5f5f5;
 }
-.d-lazy::before {
-  opacity: 1;
-  background-color: #e9ebee;
-  background-image: linear-gradient(to left, #e9ebee 0, #f4f5f6 20%, #e9ebee 40%, #e9ebee 100%);
-  background-repeat: no-repeat;
-  background-size: 1000px 900px;
-  -webkit-animation: 1s linear infinite forwards bs-lazy-anim;
-  -moz-animation: 1s linear infinite forwards bs-lazy-anim;
-  animation: 1.01s linear infinite forwards bs-lazy-anim;
-  transition: opacity 400ms;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: block;
-  content: "";
+.d-lazy.d-loaded {
+  background-color: transparent;
 }
-.d-lazy.d-loaded::before {
+.d-lazy .d-lazy-img {
   opacity: 0;
-  visibility: hidden;
   transition: opacity 400ms;
+  visibility: hidden;
+}
+.d-lazy .d-lazy-img.is-loaded {
+  transition: opacity 400ms;
+  opacity: 1;
+  visibility: inherit;
 }
 
 @-webkit-keyframes bs-lazy-anim {
-    from {
-        background-position: -800px 0
-    }
-
-    to {
-        background-position: 400px 0
-    }
+  from {
+    background-position: -800px 0;
+  }
+  to {
+    background-position: 400px 0;
+  }
 }
-
 @keyframes bs-lazy-anim {
-    from {
-        background-position: -800px 0
-    }
-
-    to {
-        background-position: 400px 0
-    }
+  from {
+    background-position: -800px 0;
+  }
+  to {
+    background-position: 400px 0;
+  }
 }
-
 @-webkit-keyframes bs-lazy-anim-rtl {
-    from {
-        background-position: 400px 0
-    }
-
-    to {
-        background-position: -800px 0
-    }
+  from {
+    background-position: 400px 0;
+  }
+  to {
+    background-position: -800px 0;
+  }
+}
+@keyframes bs-lazy-anim-rtl {
+  from {
+    background-position: 400px 0;
+  }
+  to {
+    background-position: -800px 0;
+  }
 }
 
-@keyframes bs-lazy-anim-rtl {
-    from {
-        background-position: 400px 0
-    }
-
-    to {
-        background-position: -800px 0
-    }
-} 
+/*# sourceMappingURL=style.css.map */
